@@ -1,5 +1,3 @@
-Oto dokument opisujący projekt "Fibonacci Indicator" w oparciu o dostarczony szablon:
-
 ## Opis projektu
 
 ### Cel:

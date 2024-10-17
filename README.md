@@ -1,5 +1,3 @@
-Sure! Here's the document in English at a B2 level:
-
 ## Project Description
 
 ### Goal:
