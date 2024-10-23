@@ -7,6 +7,9 @@ canvas.height = 400;
 document
 	.getElementById("generateButton")
 	.addEventListener("click", drawFibonacci);
+document.getElementById("resetButton").addEventListener("click", resetCanvas);
+document.getElementById("saveButton").addEventListener("click", saveAsPNG);
+document.getElementById("toggleTheme").addEventListener("click", toggleTheme);
 
 function drawFibonacci() {
 	const startPrice = parseFloat(document.getElementById("startPrice").value);
@@ -34,3 +37,21 @@ function drawFibonacci() {
 		ctx.fillText(`Level ${level * 100}% - ${price}`, 10, y - 10);
 	});
 }
+
+function resetCanvas() {
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function saveAsPNG() {
+	const link = document.createElement("a");
+	link.download = "fibonacci.png";
+	link.href = canvas.toDataURL();
+	link.click();
+}
+
+function toggleTheme() {
+	document.body.classList.toggle("dark");
+}
+
+// Domyślne generowanie wykresu na starcie
+drawFibonacci();
